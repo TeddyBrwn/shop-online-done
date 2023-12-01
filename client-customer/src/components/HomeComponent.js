@@ -2,6 +2,8 @@
 
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import withRouter from "../utils/withRouter";
 import "./style/Home.css";
 
 class Home extends Component {
@@ -40,13 +42,15 @@ class Home extends Component {
     return products.map((product) => (
       <div key={`${product._id}`} className="item">
         <div className="product-container">
-          <img
-            src={`data:image/jpg;base64,${product.image}`}
-            alt={product.name}
-            className="product-image"
-          />
-          <span className="product-name">{product.name}</span>
-          <p className="product-price">Giá {product.price}$</p>
+          <Link to={"/product/" + product._id}>
+            <img
+              src={`data:image/jpg;base64,${product.image}`}
+              alt={product.name}
+              className="product-image"
+            />
+            <span className="product-name">{product.name}</span>
+            <p className="product-price">Giá {product.price}$</p>
+          </Link>
         </div>
       </div>
     ));
@@ -67,4 +71,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withRouter(Home);
