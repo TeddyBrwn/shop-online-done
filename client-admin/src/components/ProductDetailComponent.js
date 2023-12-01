@@ -258,10 +258,10 @@ class ProductDetail extends Component {
     axios.post("/api/admin/products", prod, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert("OK BABY!");
+        alert("Thành công");
         this.apiGetProducts();
       } else {
-        alert("SORRY BABY!");
+        alert("Thất bại");
       }
     });
   }
@@ -270,10 +270,10 @@ class ProductDetail extends Component {
     axios.put("/api/admin/products/" + id, prod, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert("OK BABY!");
+        alert("Thành công");
         this.apiGetProducts();
       } else {
-        alert("SORRY BABY!");
+        alert("Thất bại");
       }
     });
   }
@@ -282,10 +282,10 @@ class ProductDetail extends Component {
     axios.delete("/api/admin/products/" + id, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert("OK BABY!");
+        alert("Thành công");
         this.apiGetProducts();
       } else {
-        alert("SORRY BABY!");
+        alert("Thất bại");
       }
     });
   }

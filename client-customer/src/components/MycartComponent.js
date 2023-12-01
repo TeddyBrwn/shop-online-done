@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import MyContext from "../contexts/MyContext";
 import CartUtil from "../utils/CartUtil";
@@ -40,7 +39,7 @@ class Mycart extends Component {
       );
     });
     return (
-       <div className="warapper-mycart">
+      <div className="warapper-mycart">
         {mycart == "" ? (
           <Navigate replace to="/" />
         ) : (
@@ -103,7 +102,7 @@ class Mycart extends Component {
           this.props.navigate("/login");
         }
       } else {
-        alert("Your cart is empty");
+        alert("Giỏ bạn không có đồ");
       }
     }
   }
@@ -114,11 +113,11 @@ class Mycart extends Component {
     axios.post("/api/customer/checkout", body, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert("OK BABY!");
+        alert("Thành công");
         this.context.setMycart([]);
         this.props.navigate("/home");
       } else {
-        alert("SORRY BABY!");
+        alert("Thất bại");
       }
     });
   }

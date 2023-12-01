@@ -139,10 +139,10 @@ class Myprofile extends Component {
     axios.put("/api/customer/customers/" + id, customer, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert("OK BABY!");
+        alert("Thành công");
         this.context.setCustomer(result);
       } else {
-        alert("SORRY BABY!");
+        alert("Thất bại");
       }
     });
   }

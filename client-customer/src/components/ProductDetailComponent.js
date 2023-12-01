@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import withRouter from "../utils/withRouter";
 import MyContext from "../contexts/MyContext";
-import "../components/style/ProductDetail.scss";
+import "../components/style/ProductDetail.css";
 
 class ProductDetail extends Component {
   static contextType = MyContext;
@@ -103,9 +103,9 @@ class ProductDetail extends Component {
         mycart[index].quantity += quantity;
       }
       this.context.setMycart(mycart);
-      alert("OK BABY!");
+      alert("Thành công");
     } else {
-      alert("Please input quantity");
+      alert("Nhập số lượng");
     }
   }
 }

@@ -142,7 +142,7 @@ class Order extends Component {
       if (result) {
         this.apiGetOrders();
       } else {
-        alert("SORRY BABY!");
+        alert("Thất bại");
       }
     });
   }

@@ -115,7 +115,7 @@ class Signup extends Component {
       };
       this.apiSignup(account);
     } else {
-      alert("Please input username and password and name and phone and email");
+      alert("Nhập đủ các thông tin");
     }
   }
   // apis
