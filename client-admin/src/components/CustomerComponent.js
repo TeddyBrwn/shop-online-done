@@ -124,7 +124,7 @@ class Customer extends Component {
         )}
         {this.state.order ? (
           <div className="align-center">
-            <h2 className="text-center">ORDER DETAIL</h2>
+            <h2 className="text-center">Chi Tiết Đặt Hàng</h2>
             <table className="datatable" border="1">
               <tbody>
                 <tr className="datatable">
