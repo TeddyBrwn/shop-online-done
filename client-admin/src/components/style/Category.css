@@ -1,0 +1,47 @@
+/* Category.css */
+
+.float-left {
+    /* display: block; */
+    float: left;
+    margin-right: 20px; /* Adjust as needed for spacing between the two divs */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .datatable {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .datatable th,
+  .datatable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .datatable th {
+    background-color: #f2f2f2;
+  }
+  
+  .datatable tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .inline {
+    display: inline-block;
+  }
+  
+  .float-clear::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  form{
+    display: flex;
+    justify-content: center;
+  }
+  
